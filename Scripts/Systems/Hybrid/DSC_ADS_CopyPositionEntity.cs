@@ -3,18 +3,19 @@ using Unity.Transforms;
 
 namespace DSC.Actor.DOTS
 {
-    [UpdateInGroup(typeof(InitializationSystemGroup))]
-    public sealed class DSC_ADS_CopyPositionTransform : ComponentSystem
+    [UpdateInGroup(typeof(PresentationSystemGroup))]
+    public sealed class DSC_ADS_CopyPositionEntity : ComponentSystem
     {
         protected override void OnUpdate()
         {
-            Entities.WithAll<DSC_ADT_CopyPositionTransform>()
+            Entities.WithAll<DSC_ADT_CopyPosition>()
+                .WithAll<DSC_ADT_EntityToGameObject>()
                 .ForEach((DSC_ADM_GameObject hGameObjectData
                 ,ref Translation hTrans) =>
             {
                 if (hGameObjectData.hTransform)
                 {
-                    hTrans.Value = hGameObjectData.hTransform.position;
+                    hGameObjectData.hTransform.position = hTrans.Value;
                 }
             });
         }

@@ -9,6 +9,7 @@ namespace DSC.Actor.DOTS
     {
         [HideInInspector]
         public bool bHasMove;
+        [HideInInspector]
         public float3 f3Move;
     }
 }

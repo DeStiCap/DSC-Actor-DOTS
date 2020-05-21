@@ -5,13 +5,13 @@ using UnityEngine;
 namespace DSC.Actor.DOTS
 {
     [UpdateInGroup(typeof(PresentationSystemGroup))]
-    public sealed class DSC_ADS_CopyMove : ComponentSystem
+    public sealed class DSC_ADS_MoveGameObject : ComponentSystem
     {
         protected override void OnUpdate()
         {
             Entities.ForEach((DSC_ADM_GameObject hGameObjectData
                 ,ref DSC_ADD_Move hMoveData
-                ,ref DSC_ADD_CopyMoveType hCopyType
+                ,ref DSC_ADD_MoveGameObjectType hCopyType
                 ,ref DSC_ADD_RigidbodyType hRigidType) =>
             {
                 if (!hMoveData.bHasMove)
@@ -21,14 +21,14 @@ namespace DSC.Actor.DOTS
 
                 switch (hCopyType.Value)
                 {
-                    case CopyMoveType.Transform:
+                    case MoveGameObjectType.Transform:
                         if (hGameObjectData.hTransform)
                         {
                             hGameObjectData.hTransform.position += vMove;
                         }
                         break;
 
-                    case CopyMoveType.Rigidbody:
+                    case MoveGameObjectType.Rigidbody:
                         if(hRigidType.Value == RigidbodyType.Rigidbody3D
                         && hGameObjectData.hRigid)
                         {

@@ -8,7 +8,8 @@ namespace DSC.Actor.DOTS
     {
         protected override void OnUpdate()
         {
-            Entities.WithAll<DSC_ADT_CopyRotationGameObject>()
+            Entities.WithAll<DSC_ADT_CopyRotation>()
+                .WithAll<DSC_ADT_GameObjectToEntity>()
                 .ForEach((DSC_ADM_GameObject hGameObjectData
                 ,ref Rotation hRot) =>
             {

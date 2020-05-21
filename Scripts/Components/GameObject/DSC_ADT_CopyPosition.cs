@@ -3,7 +3,7 @@
 namespace DSC.Actor.DOTS
 {
     [GenerateAuthoringComponent]
-    public struct DSC_ADT_CopyRotationEntity : IComponentData
+    public struct DSC_ADT_CopyPosition : IComponentData
     {
 
     }

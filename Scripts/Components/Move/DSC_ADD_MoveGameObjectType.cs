@@ -4,7 +4,7 @@ namespace DSC.Actor.DOTS
 {
     #region Enum
 
-    public enum CopyMoveType
+    public enum MoveGameObjectType
     {
         Transform,
         Rigidbody
@@ -13,8 +13,8 @@ namespace DSC.Actor.DOTS
     #endregion
 
     [GenerateAuthoringComponent]
-    public struct DSC_ADD_CopyMoveType : IComponentData
+    public struct DSC_ADD_MoveGameObjectType : IComponentData
     {
-        public CopyMoveType Value;
+        public MoveGameObjectType Value;
     }
 }
