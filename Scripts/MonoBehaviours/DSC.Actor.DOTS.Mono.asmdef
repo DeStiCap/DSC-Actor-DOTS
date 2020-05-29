@@ -1,13 +1,8 @@
 {
-    "name": "DSC.Actor.DOTS.Author",
+    "name": "DSC.Actor.DOTS.Mono",
     "references": [
         "GUID:acff8e849db7dec488c770445e10185e",
-        "GUID:11600da602bfe6744bcc46fb972e4dc6",
-        "GUID:943c0b22f965a2d44b6fdbac460e8c5c",
-        "GUID:734d92eba21c94caba915361bd5ac177",
-        "GUID:d8b63aba1907145bea998dd612889d6b",
-        "GUID:e0cd26848372d4e5c891c569017e11f1",
-        "GUID:8819f35a0fc84499b990e90a4ca1911f"
+        "GUID:75469ad4d38634e559750d17036d5f7c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

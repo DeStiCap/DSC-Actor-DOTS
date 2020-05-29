@@ -1,3 +1,9 @@
+## [0.0.2-preivew.1] - 2019-05-29
+- Add Input data and system.
+- Add DSC_ADD_Player component for store player data.
+- Add DSC_Actor_Input for use with new input system.
+- Add DSC_Actor_Player.
+
 ## [0.0.1-preivew.1] - 2019-05-21
 - Add components tag GameObjectToEntity and EntityToGameObject.
 - Add MoveEntity system.
