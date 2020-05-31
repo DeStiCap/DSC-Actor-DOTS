@@ -12,15 +12,10 @@ namespace DSC.Actor.DOTS
         public float2 m_f2RawAxis;
         public float2 m_f2Axis;
 
-        public DirectionType2D m_eHorizontalPress;
-        public DirectionType2D m_eHorizontalDoublePress;
-        public DirectionType2D m_eHorizontalTap;
-        public DirectionType2D m_eHorizontalDoubleTap;
-
-        public DirectionType2D m_eVerticalPress;
-        public DirectionType2D m_eVerticalDoublePress;
-        public DirectionType2D m_eVerticalTap;
-        public DirectionType2D m_eVerticalDoubleTap;
+        public DirectionType2D m_eAxisPress;
+        public DirectionType2D m_eAxisDoublePress;
+        public DirectionType2D m_eAxisTap;
+        public DirectionType2D m_eAxisDoubleTap;
     }
 
     #endregion

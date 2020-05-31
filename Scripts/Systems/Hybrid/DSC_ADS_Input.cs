@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Unity.Entities;
-using UnityEngine;
+﻿using Unity.Entities;
 using DSC.Core;
 
 namespace DSC.Actor.DOTS
@@ -18,26 +15,20 @@ namespace DSC.Actor.DOTS
                 var hAxis = hInput.m_hAxis;
                 hAxis.m_f2RawAxis = DSC_Input.GetRawAxis(nPlayerID);
                 hAxis.m_f2Axis = DSC_Input.GetAxis(nPlayerID);
-                hAxis.m_eHorizontalPress = DSC_Input.GetHorizontalPress(nPlayerID);
-                hAxis.m_eHorizontalDoublePress = DSC_Input.GetHorizontalDoublePress(nPlayerID);
-                hAxis.m_eHorizontalTap = DSC_Input.GetHorizontalTap(nPlayerID);
-                hAxis.m_eHorizontalDoubleTap = DSC_Input.GetHorizontalDoubleTap(nPlayerID);
-                hAxis.m_eVerticalPress = DSC_Input.GetVerticalPress(nPlayerID);
-                hAxis.m_eVerticalDoublePress = DSC_Input.GetVerticalDoublePress(nPlayerID);
-                hAxis.m_eVerticalTap = DSC_Input.GetVerticalTap(nPlayerID);
-                hAxis.m_eVerticalDoubleTap = DSC_Input.GetVerticalDoubleTap(nPlayerID);             
+                hAxis.m_eAxisPress = DSC_Input.GetAxisEvent(nPlayerID, AxisEventType.Press);
+                hAxis.m_eAxisDoublePress = DSC_Input.GetAxisEvent(nPlayerID, AxisEventType.DoublePress);
+                hAxis.m_eAxisTap = DSC_Input.GetAxisEvent(nPlayerID, AxisEventType.Tap);
+                hAxis.m_eAxisDoubleTap = DSC_Input.GetAxisEvent(nPlayerID, AxisEventType.DoubleTap);
+
 
                 var hAxis2 = hInput.m_hAxis2;
                 hAxis2.m_f2RawAxis = DSC_Input.GetRawAxis(nPlayerID, 1);
                 hAxis2.m_f2Axis = DSC_Input.GetAxis(nPlayerID, 1);
-                hAxis2.m_eHorizontalPress = DSC_Input.GetHorizontalPress(nPlayerID, 1);
-                hAxis2.m_eHorizontalDoublePress = DSC_Input.GetHorizontalDoublePress(nPlayerID, 1);
-                hAxis2.m_eHorizontalTap = DSC_Input.GetHorizontalTap(nPlayerID, 1);
-                hAxis2.m_eHorizontalDoubleTap = DSC_Input.GetHorizontalDoubleTap(nPlayerID, 1);
-                hAxis2.m_eVerticalPress = DSC_Input.GetVerticalPress(nPlayerID, 1);
-                hAxis2.m_eVerticalDoublePress = DSC_Input.GetVerticalDoublePress(nPlayerID, 1);
-                hAxis2.m_eVerticalTap = DSC_Input.GetVerticalTap(nPlayerID, 1);
-                hAxis2.m_eVerticalDoubleTap = DSC_Input.GetVerticalDoubleTap(nPlayerID, 1);
+                hAxis2.m_eAxisPress = DSC_Input.GetAxisEvent(nPlayerID, AxisEventType.Press, 1);
+                hAxis2.m_eAxisDoublePress = DSC_Input.GetAxisEvent(nPlayerID, AxisEventType.DoublePress, 1);
+                hAxis2.m_eAxisTap = DSC_Input.GetAxisEvent(nPlayerID, AxisEventType.Tap, 1);
+                hAxis2.m_eAxisDoubleTap = DSC_Input.GetAxisEvent(nPlayerID, AxisEventType.DoubleTap, 1);
+
 
                 var eDown = (InputButtonType)DSC_Input.GetAllButtonDownFlag(nPlayerID);
                 var eHold = (InputButtonType)DSC_Input.GetAllButtonHoldFlag(nPlayerID);

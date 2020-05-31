@@ -1,3 +1,7 @@
+## [0.0.3-preivew.1] - 2019-05-31
+- Add InputTemplate sample.
+- Change DSC_ADS_Input to use new GetAxisEvent API from DSC_Input instead GetHorizontal and GetVertical.
+
 ## [0.0.2-preivew.1] - 2019-05-29
 - Add Input data and system.
 - Add DSC_ADD_Player component for store player data.

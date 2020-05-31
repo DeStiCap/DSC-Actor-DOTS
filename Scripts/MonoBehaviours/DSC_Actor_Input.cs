@@ -80,6 +80,56 @@ namespace DSC.Actor.DOTS
             DSC_Input.SetButtonInput(m_nPlayerID, (int)InputButtonType.East, hValue.ReadValueAsButton());
         }
 
+        public void OnL1(CallbackContext hValue)
+        {
+            DSC_Input.SetButtonInput(m_nPlayerID, (int)InputButtonType.L1, hValue.ReadValueAsButton());
+        }
+
+        public void OnL2(CallbackContext hValue)
+        {
+            DSC_Input.SetButtonInput(m_nPlayerID, (int)InputButtonType.L2, hValue.ReadValueAsButton());
+        }
+
+        public void OnL3(CallbackContext hValue)
+        {
+            DSC_Input.SetButtonInput(m_nPlayerID, (int)InputButtonType.L3, hValue.ReadValueAsButton());
+        }
+
+        public void OnR1(CallbackContext hValue)
+        {
+            DSC_Input.SetButtonInput(m_nPlayerID, (int)InputButtonType.R1, hValue.ReadValueAsButton());
+        }
+
+        public void OnR2(CallbackContext hValue)
+        {
+            DSC_Input.SetButtonInput(m_nPlayerID, (int)InputButtonType.R2, hValue.ReadValueAsButton());
+        }
+
+        public void OnR3(CallbackContext hValue)
+        {
+            DSC_Input.SetButtonInput(m_nPlayerID, (int)InputButtonType.R3, hValue.ReadValueAsButton());
+        }
+
+        public void OnStart(CallbackContext hValue)
+        {
+            DSC_Input.SetButtonInput(m_nPlayerID, (int)InputButtonType.Start, hValue.ReadValueAsButton());
+        }
+
+        public void OnSelect(CallbackContext hValue)
+        {
+            DSC_Input.SetButtonInput(m_nPlayerID, (int)InputButtonType.Select, hValue.ReadValueAsButton());
+        }
+
+        public void OnConfirm(CallbackContext hValue)
+        {
+            DSC_Input.SetButtonInput(m_nPlayerID, (int)InputButtonType.Confirm, hValue.ReadValueAsButton());
+        }
+
+        public void OnCancel(CallbackContext hValue)
+        {
+            DSC_Input.SetButtonInput(m_nPlayerID, (int)InputButtonType.Cancel, hValue.ReadValueAsButton());
+        }
+
         #endregion
     }
 }
