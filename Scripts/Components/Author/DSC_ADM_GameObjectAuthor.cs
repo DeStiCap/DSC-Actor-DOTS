@@ -23,18 +23,27 @@ namespace DSC.Actor.DOTS
                 return;
             }
 
-            var hAnim = m_hAnim != null ? m_hAnim : m_hGameObject.GetComponent<Animator>();
-            var hAudio = m_hAudio != null ? m_hAudio : m_hGameObject.GetComponent<AudioSource>();
+            dstManager.AddComponentObject(entity, m_hGameObject.transform);
 
-            dstManager.AddComponentObject(entity, new DSC_ADM_GameObject
-            {
-                hGameObject = m_hGameObject,
-                hTransform = m_hGameObject.transform,
-                hRigid = m_hGameObject.GetComponent<Rigidbody>(),
-                hRigid2D = m_hGameObject.GetComponent<Rigidbody2D>(),
-                hAnim = hAnim,
-                hAudio = hAudio
-            });
+            
+            if (m_hAnim)
+                dstManager.AddComponentObject(entity, m_hAnim);
+
+            if (m_hAudio)
+                dstManager.AddComponentObject(entity, m_hAudio);
+
+            var hRigid = m_hGameObject.GetComponent<Rigidbody>();
+            if (hRigid)
+                dstManager.AddComponentObject(entity, hRigid);
+
+            var hRigid2D = m_hGameObject.GetComponent<Rigidbody2D>();
+            if (hRigid2D)
+                dstManager.AddComponentObject(entity, hRigid2D);
+
+
+            var hCapsule = m_hGameObject.GetComponent<CapsuleCollider>();
+            if (hCapsule)
+                dstManager.AddComponentObject(entity, hCapsule);
         }
     }
 }

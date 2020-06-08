@@ -1,23 +1,24 @@
-﻿using Unity.Entities;
+﻿using UnityEngine;
+using Unity.Entities;
 using Unity.Transforms;
 
 namespace DSC.Actor.DOTS
 {
     [UpdateInGroup(typeof(InitializationSystemGroup))]
-    public sealed class DSC_ADS_CopyPositionGameObject : ComponentSystem
+    public sealed class DSC_ADS_CopyPositionGameObject : SystemBase
     {
         protected override void OnUpdate()
         {
             Entities.WithAll<DSC_ADT_CopyPosition>()
-                .WithAll<DSC_ADT_GameObjectToEntity>()
-                .ForEach((DSC_ADM_GameObject hGameObjectData
+                .ForEach((Transform transform
                 ,ref Translation hTrans) =>
             {
-                if (hGameObjectData.hTransform)
+                if (transform)
                 {
-                    hTrans.Value = hGameObjectData.hTransform.position;
+                    hTrans.Value = transform.position;
                 }
-            });
+            }).WithoutBurst()
+            .Run();
         }
     }
 }

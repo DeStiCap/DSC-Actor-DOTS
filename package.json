@@ -2,12 +2,12 @@
     "name": "com.dsc.actordots",
     "author": "DeStiCap",
     "displayName": "DSC Actor DOTS",
-    "version": "0.0.3-preview.1",
+    "version": "0.0.4-preview.1",
     "unity": "2019.3",
     "repository": {
         "type": "git",
         "url": "https://github.com/DeStiCap/DSC-Actor-DOTS.git",
-        "revision": "b3bb984397e958e1535ae83c7b76451999a8c49e"
+        "revision": "ebcb21554bed63455557c41c63fdf169d9522707"
     },
     "description": "DOTS Actor system for unity.",
     "keywords": [

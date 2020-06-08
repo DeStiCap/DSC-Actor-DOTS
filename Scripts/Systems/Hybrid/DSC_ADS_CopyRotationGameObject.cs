@@ -1,23 +1,24 @@
-﻿using Unity.Entities;
+﻿using UnityEngine;
+using Unity.Entities;
 using Unity.Transforms;
 
 namespace DSC.Actor.DOTS
 {
     [UpdateInGroup(typeof(InitializationSystemGroup))]
-    public sealed class DSC_ADS_CopyRotationGameObject : ComponentSystem
+    public sealed class DSC_ADS_CopyRotationGameObject : SystemBase
     {
         protected override void OnUpdate()
         {
             Entities.WithAll<DSC_ADT_CopyRotation>()
-                .WithAll<DSC_ADT_GameObjectToEntity>()
-                .ForEach((DSC_ADM_GameObject hGameObjectData
+                .ForEach((Transform transform
                 ,ref Rotation hRot) =>
             {
-                if (hGameObjectData.hTransform)
+                if (transform)
                 {
-                    hRot.Value = hGameObjectData.hTransform.rotation;
+                    hRot.Value = transform.rotation;
                 }
-            });
+            }).WithoutBurst()
+            .Run();
         }
     }
 }

@@ -1,3 +1,13 @@
+## [0.0.4-preivew.1] - 2020-06-08
+- Remove all of component and system about Entity to GameObject.
+- Add MoveSpeed3D component.
+- Add LockCursor component and system.
+- Add GroundCheck component and system.
+- Add GroundDrag component and system.
+- Add Jump component and system.
+- Add FPS move system.
+- Add FPS Rotate system.
+
 ## [0.0.3-preivew.1] - 2019-05-31
 - Add InputTemplate sample.
 - Change DSC_ADS_Input to use new GetAxisEvent API from DSC_Input instead GetHorizontal and GetVertical.

@@ -3,8 +3,8 @@
 namespace DSC.Actor.DOTS
 {
     [GenerateAuthoringComponent]
-    public struct DSC_ADD_Move : IComponentData
+    public struct DSC_ADT_FPS : IComponentData
     {
-        public bool m_bAirControl;
+
     }
 }

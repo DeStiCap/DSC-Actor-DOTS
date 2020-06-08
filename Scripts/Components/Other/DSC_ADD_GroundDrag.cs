@@ -3,8 +3,8 @@
 namespace DSC.Actor.DOTS
 {
     [GenerateAuthoringComponent]
-    public struct DSC_ADD_Move : IComponentData
+    public struct DSC_ADD_GroundDrag : IComponentData
     {
-        public bool m_bAirControl;
+        public float Value;
     }
 }

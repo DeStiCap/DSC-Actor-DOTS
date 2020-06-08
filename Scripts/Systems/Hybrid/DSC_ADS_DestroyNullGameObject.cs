@@ -1,4 +1,5 @@
-﻿using Unity.Entities;
+﻿using UnityEngine;
+using Unity.Entities;
 
 namespace DSC.Actor.DOTS
 {
@@ -8,9 +9,9 @@ namespace DSC.Actor.DOTS
         protected override void OnUpdate()
         {
             Entities.ForEach((Entity hEntity
-                ,DSC_ADM_GameObject hGameObjectData) =>
+                ,Transform transform) =>
             {
-                if(hGameObjectData.hGameObject == null)
+                if(transform == null)
                 {
                     EntityManager.DestroyEntity(hEntity);
                 }
