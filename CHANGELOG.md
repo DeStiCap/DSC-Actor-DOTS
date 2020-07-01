@@ -1,3 +1,6 @@
+## [0.0.5-preivew.1] - 2020-07-01
+- Move Input template sample to DSC-Input package instead.
+
 ## [0.0.4-preivew.1] - 2020-06-08
 - Remove all of component and system about Entity to GameObject.
 - Add MoveSpeed3D component.
