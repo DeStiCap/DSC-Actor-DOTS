@@ -1,3 +1,6 @@
+## [0.0.6-preivew.1] - 2020-07-02
+- Move DSC_Actor_Input to DSC-Input package. (Rename script to DSC_Input_Player.)
+
 ## [0.0.5-preivew.1] - 2020-07-01
 - Move Input template sample to DSC-Input package instead.
 
