@@ -1,3 +1,6 @@
+## [0.0.7-preivew.1] - 2020-07-04
+- Add MoveSlope component and system.
+
 ## [0.0.6-preivew.2] - 2020-07-02
 - Move DSC_Actor_Input to DSC-Input package. (Rename script to DSC_Input_Player.)
 - Remove Unity Input dependencies.
