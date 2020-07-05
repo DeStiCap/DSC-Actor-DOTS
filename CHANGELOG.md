@@ -1,3 +1,8 @@
+## [0.1.0-preivew.1] - 2020-07-05
+- Change minimum requirement Unity version to 2019.4
+- Add StickToGround component and system.
+- Fixed DSC_ADS_DestroyNullGameObject generate garbage every frame.
+
 ## [0.0.7-preivew.2] - 2020-07-04
 - Add MoveSlope component and system.
 - Add Unity Entities dependencies.
