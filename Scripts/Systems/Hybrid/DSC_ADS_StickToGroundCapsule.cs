@@ -28,11 +28,11 @@ namespace DSC.Actor.DOTS
                     return;
 
                 RaycastHit hitInfo;
-                if (Physics.SphereCast(transform.position, hCol.radius, Vector3.down, out hitInfo,
+                if (Physics.SphereCast(transform.position, hCol.radius, -transform.up, out hitInfo,
                                        ((hCol.height * 0.5f) - hCol.radius) +
                                        hStick.m_fStickToGroundDistance, hGround.m_eGroundLayer, QueryTriggerInteraction.Ignore))
                 {
-                    if (Mathf.Abs(Vector3.Angle(hitInfo.normal, Vector3.up)) <= hStick.m_fMaxStickGroundAngle)
+                    if (Mathf.Abs(Vector3.Angle(hitInfo.normal, transform.up)) <= hStick.m_fMaxStickGroundAngle)
                     {
                         hRigid.velocity = Vector3.ProjectOnPlane(hRigid.velocity, hitInfo.normal);
                     }

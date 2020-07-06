@@ -9,15 +9,17 @@ namespace DSC.Actor.DOTS
     {
         protected override void OnUpdate()
         {
-            Entities.ForEach((DSC_ADM_MoveSlopeCurve hCurve
+            Entities.ForEach((Transform transform
+                ,DSC_ADM_MoveSlopeCurve hCurve
                 ,ref DSC_ADD_MoveSlope hSlope
                 ,ref DSC_ADD_GroundCheck hGround) =>
             {
-                if (hCurve.Value == null)
+                if (transform == null
+                || hCurve.Value == null)
                     return;
 
                 hSlope.m_fSpeedMultiplier = hCurve.Value.Evaluate(
-                    Vector3.Angle(hGround.m_f3GroundNormal, Vector3.up));
+                    Vector3.Angle(hGround.m_f3GroundNormal, transform.up));
 
             }).WithoutBurst()
             .Run();

@@ -1,3 +1,6 @@
+## [0.1.1-preivew.1] - 2020-07-06
+- Now MoveSlopeCheck and StickToGround system use Actor transform to calculate direction instead.
+
 ## [0.1.0-preivew.1] - 2020-07-05
 - Change minimum requirement Unity version to 2019.4
 - Add StickToGround component and system.
