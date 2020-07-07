@@ -13,5 +13,8 @@ namespace DSC.Actor.DOTS
 
         [HideInInspector]
         public bool m_bJumping;
+
+        [HideInInspector]
+        public double m_fJumpStartTime;
     }
 }

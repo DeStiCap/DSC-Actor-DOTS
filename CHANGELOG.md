@@ -1,3 +1,7 @@
+## [0.1.2-preivew.1] - 2020-07-07
+- Fixed bug player stuck in jumping state forever if jump never leave player from ground.
+- Added FPS Template sample.
+
 ## [0.1.1-preivew.1] - 2020-07-06
 - Now MoveSlopeCheck and StickToGround system use Actor transform to calculate direction instead.
 

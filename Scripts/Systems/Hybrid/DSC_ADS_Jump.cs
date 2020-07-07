@@ -10,6 +10,8 @@ namespace DSC.Actor.DOTS
     {
         protected override void OnUpdate()
         {
+            var fTime = Time.ElapsedTime;
+
             Entities.ForEach((Transform transform
                 ,Rigidbody hRigid
                 ,ref DSC_ADD_Input hInput
@@ -22,7 +24,8 @@ namespace DSC.Actor.DOTS
 
                 if (hJump.m_bJumping)
                 {
-                    if (hGround.m_bOnGround && !hGround.m_bOnGroundPrevious)
+                    if (hGround.m_bOnGround
+                    && (!hGround.m_bOnGroundPrevious || (fTime >= hJump.m_fJumpStartTime + 0.2f)))
                         hJump.m_bJumping = false;
                     else
                         return;
@@ -32,8 +35,8 @@ namespace DSC.Actor.DOTS
                 {
                     hRigid.AddForce(transform.up * hJump.m_fForce, ForceMode.Impulse);
                     hJump.m_bJumping = true;
-                }
-                
+                    hJump.m_fJumpStartTime = fTime;
+                }               
                 
 
             }).WithoutBurst()
