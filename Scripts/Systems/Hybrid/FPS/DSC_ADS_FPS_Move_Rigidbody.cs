@@ -5,7 +5,8 @@ using UnityEngine;
 namespace DSC.Actor.DOTS
 {
     [UpdateAfter(typeof(DSC_ADS_Move_Pre))]
-    public sealed class DSC_ADS_FPS_Move : SystemBase
+    [UpdateBefore(typeof(DSC_ADS_Move))]
+    public sealed class DSC_ADS_FPS_Move_Rigidbody : SystemBase
     {
         protected override void OnUpdate()
         {

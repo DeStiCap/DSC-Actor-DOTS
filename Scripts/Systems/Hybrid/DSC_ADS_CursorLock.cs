@@ -7,8 +7,7 @@ namespace DSC.Actor.DOTS
     {
         protected override void OnUpdate()
         {
-            Entities.ForEach((ref DSC_ADD_CursorLock hCursor
-                ,ref DSC_ADD_Input hInput) =>
+            Entities.ForEach((ref DSC_ADD_CursorLock hCursor) =>
             {
                 if (hCursor.m_eLockMode == hCursor.m_ePreviousMode)
                     return;

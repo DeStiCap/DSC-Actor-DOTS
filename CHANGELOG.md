@@ -1,3 +1,6 @@
+## [0.1.3-preivew.1] - 2020-07-08
+- Add gravity component and system.
+
 ## [0.1.2-preivew.1] - 2020-07-07
 - Fixed bug player stuck in jumping state forever if jump never leave player from ground.
 - Added FPS Template sample.

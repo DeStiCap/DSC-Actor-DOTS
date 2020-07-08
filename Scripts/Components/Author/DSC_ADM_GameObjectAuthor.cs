@@ -32,6 +32,10 @@ namespace DSC.Actor.DOTS
             if (m_hAudio)
                 dstManager.AddComponentObject(entity, m_hAudio);
 
+            var hCharacterController = m_hGameObject.GetComponent<CharacterController>();
+            if (hCharacterController)
+                dstManager.AddComponentObject(entity, hCharacterController);
+
             var hRigid = m_hGameObject.GetComponent<Rigidbody>();
             if (hRigid)
                 dstManager.AddComponentObject(entity, hRigid);
@@ -39,7 +43,6 @@ namespace DSC.Actor.DOTS
             var hRigid2D = m_hGameObject.GetComponent<Rigidbody2D>();
             if (hRigid2D)
                 dstManager.AddComponentObject(entity, hRigid2D);
-
 
             var hCapsule = m_hGameObject.GetComponent<CapsuleCollider>();
             if (hCapsule)

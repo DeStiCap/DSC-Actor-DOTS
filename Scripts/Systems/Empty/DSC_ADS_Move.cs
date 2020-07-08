@@ -2,8 +2,7 @@
 
 namespace DSC.Actor.DOTS
 {
-    [UpdateBefore(typeof(DSC_ADS_Move))]
-    public sealed class DSC_ADS_Move_Pre : SystemBase
+    public sealed class DSC_ADS_Move : SystemBase
     {
         protected override void OnUpdate()
         {
