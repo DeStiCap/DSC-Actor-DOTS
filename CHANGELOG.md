@@ -1,3 +1,7 @@
+## [0.1.4-preivew.1] - 2020-07-27
+- Add support for Character Controller.
+- Now FPS Rigidbody is broken.
+
 ## [0.1.3-preivew.1] - 2020-07-08
 - Add gravity component and system.
 

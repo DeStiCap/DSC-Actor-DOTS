@@ -14,5 +14,11 @@ namespace DSC.Actor.DOTS
 
         [HideInInspector]
         public float3 m_f3Move;
+
+        [HideInInspector]
+        public float3 m_f3MovePrevious;
+
+        [HideInInspector]
+        public float m_fDeltaTimePrevious;
     }
 }

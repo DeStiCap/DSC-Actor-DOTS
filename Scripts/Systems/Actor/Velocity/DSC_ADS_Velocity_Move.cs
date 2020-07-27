@@ -1,0 +1,25 @@
+﻿using Unity.Entities;
+using Unity.Mathematics;
+
+namespace DSC.Actor.DOTS
+{
+    [UpdateBefore(typeof(DSC_ADG_Move))]
+    public sealed class DSC_ADS_Velocity_Move : SystemBase
+    {
+        protected override void OnUpdate()
+        {
+            float fDeltaTime = Time.DeltaTime;
+
+            Entities.ForEach((ref DSC_ADD_Velocity hVelocity
+                , ref DSC_ADD_Move hMove) =>
+            {
+                if (math.all(hVelocity.m_f3Velocity == float3.zero))
+                    return;
+
+                hMove.m_bHasMove = true;
+                hMove.m_f3Move += hVelocity.m_f3Velocity * fDeltaTime;
+
+            }).ScheduleParallel();
+        }
+    }
+}
