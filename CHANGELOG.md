@@ -1,3 +1,7 @@
+## [0.2.0-preivew.1] - 2020-07-28
+- Change minimum requirement Unity version to 2020.1
+- Change dependency Entities to version 0.13.0-preview24
+
 ## [0.1.4-preivew.1] - 2020-07-27
 - Add support for Character Controller.
 - Now FPS Rigidbody is broken.
