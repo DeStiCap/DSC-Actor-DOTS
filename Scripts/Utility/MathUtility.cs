@@ -159,11 +159,11 @@ namespace DSC.Actor.DOTS
         /// <returns></returns>
         static float3 ConvertEulerToUnityAngle(float3 f3Angles)
         {
-            f3Angles *= 57.3f;
+            f3Angles = math.degrees(f3Angles);
 
-            f3Angles.x = (float) System.Math.Round(f3Angles.x, 1);
-            f3Angles.y = (float) System.Math.Round(f3Angles.y, 1);
-            f3Angles.z = (float) System.Math.Round(f3Angles.z, 1);
+            f3Angles.x = (float) System.Math.Round(f3Angles.x, 3);
+            f3Angles.y = (float) System.Math.Round(f3Angles.y, 3);
+            f3Angles.z = (float) System.Math.Round(f3Angles.z, 3);
 
             return f3Angles;
         }

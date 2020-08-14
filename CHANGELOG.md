@@ -1,3 +1,6 @@
+## [0.2.1-preivew.1] - 2020-08-14
+- Improved MathUltility EulerAngle API convert correctly.
+
 ## [0.2.0-preivew.1] - 2020-07-28
 - Change minimum requirement Unity version to 2020.1
 - Change dependency Entities to version 0.13.0-preview24
