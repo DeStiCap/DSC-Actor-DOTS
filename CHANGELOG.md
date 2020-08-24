@@ -1,3 +1,7 @@
+## [0.2.2-preivew.1] - 2020-08-24
+- Change dependency Entities to version 0.14.0-preview18
+- Add dependency DOTS editor version 0.10.0-preview
+
 ## [0.2.1-preivew.1] - 2020-08-14
 - Improved MathUltility EulerAngle API convert correctly.
 

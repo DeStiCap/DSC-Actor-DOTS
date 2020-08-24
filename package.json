@@ -2,7 +2,7 @@
     "name": "com.dsc.actordots",
     "author": "DeStiCap",
     "displayName": "DSC Actor DOTS",
-    "version": "0.2.1-preview.1",
+    "version": "0.2.2-preview.1",
     "unity": "2020.1",
     "repository": {
         "type": "git",
@@ -15,7 +15,8 @@
         "DOTS"
     ],
     "dependencies": {
-        "com.unity.entities": "0.13.0-preview.24"
+        "com.unity.entities": "0.14.0-preview.18",
+        "com.unity.dots.editor": "0.10.0-preview"
     },
     "samples": [
         {
