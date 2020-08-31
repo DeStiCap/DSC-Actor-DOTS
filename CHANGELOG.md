@@ -1,3 +1,9 @@
+## [0.2.3-preivew.1] - 2020-08-31
+- Add DSC_ADG_Update_PreEarly.
+- Add DSC_ADG_Update_Early.
+- Add DSC_ADG_Update_Normal.
+- Add DSC_ADG_Update_Late.
+
 ## [0.2.2-preivew.1] - 2020-08-24
 - Change dependency Entities to version 0.14.0-preview18
 - Add dependency DOTS editor version 0.10.0-preview

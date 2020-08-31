@@ -3,7 +3,8 @@ using Unity.Entities;
 
 namespace DSC.Actor.DOTS
 {
-    [UpdateInGroup(typeof(InitializationSystemGroup))]
+    [UpdateInGroup(typeof(DSC_ADG_Update_PreEarly))]
+    [UpdateBefore(typeof(DSC_ADG_GameObjectToEntity))]
     public sealed class DSC_ADS_DestroyNullGameObject : SystemBase
     {
         protected override void OnUpdate()

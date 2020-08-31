@@ -4,8 +4,7 @@ using UnityEngine;
 namespace DSC.Actor.DOTS
 {
     [ExecuteAlways]
-    [UpdateInGroup(typeof(InitializationSystemGroup))]
-    [UpdateAfter(typeof(DSC_ADG_GameObjectToEntity))]
+    [UpdateInGroup(typeof(DSC_ADG_Update_Early))]
     public sealed class DSC_ADG_GroundCheck : ComponentSystemGroup
     {
 
