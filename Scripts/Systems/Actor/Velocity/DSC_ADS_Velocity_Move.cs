@@ -3,15 +3,15 @@ using Unity.Mathematics;
 
 namespace DSC.Actor.DOTS
 {
-    [UpdateBefore(typeof(DSC_ADG_Move))]
+    [UpdateInGroup(typeof(DSC_ADG_Update_PostNormal))]
     public sealed class DSC_ADS_Velocity_Move : SystemBase
     {
         protected override void OnUpdate()
         {
             float fDeltaTime = Time.DeltaTime;
 
-            Entities.ForEach((ref DSC_ADD_Velocity hVelocity
-                , ref DSC_ADD_Move hMove) =>
+            Entities.ForEach((ref DSC_ADD_Move hMove
+                , in DSC_ADD_Velocity hVelocity) =>
             {
                 if (math.all(hVelocity.m_f3Velocity == float3.zero))
                     return;

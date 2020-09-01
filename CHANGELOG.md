@@ -1,3 +1,10 @@
+## [0.2.4-preivew.1] - 2020-09-01
+- Add DSC_ADG_Update_PostEarly.
+- Add DSC_ADG_Update_PreNormal.
+- Add DSC_ADG_Update_PostNormal.
+- Add DSC_ADG_Update_PreLate.
+- Add DSC_ADG_Update_PostLate.
+
 ## [0.2.3-preivew.1] - 2020-08-31
 - Add DSC_ADG_Update_PreEarly.
 - Add DSC_ADG_Update_Early.

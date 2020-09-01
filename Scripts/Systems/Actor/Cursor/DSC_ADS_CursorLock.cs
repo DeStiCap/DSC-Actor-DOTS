@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace DSC.Actor.DOTS
 {
+    [UpdateInGroup(typeof(DSC_ADG_Update_Normal))]
     public sealed class DSC_ADS_CursorLock : SystemBase
     {
         protected override void OnUpdate()

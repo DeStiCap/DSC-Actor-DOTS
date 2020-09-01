@@ -1,9 +1,9 @@
 ﻿using Unity.Entities;
-using Unity.Mathematics;
 using UnityEngine;
 
 namespace DSC.Actor.DOTS
 {
+    [UpdateInGroup(typeof(DSC_ADG_Update_Normal))]
     public sealed class DSC_ADS_FPS_CameraCMRotate : SystemBase
     {
         protected override void OnUpdate()
@@ -12,10 +12,10 @@ namespace DSC.Actor.DOTS
 
             Entities.WithAll<DSC_ADT_FPS>()
                 .ForEach((DSC_ADM_CameraCM hCamera
-                ,Transform transform
-                ,ref DSC_ADD_CameraCMRotate hRotate
-                ,ref DSC_ADD_Input hInput
-                ,ref DSC_ADD_CursorLock hCursor) =>
+                , Transform transform
+                , in DSC_ADD_CameraCMRotate hRotate
+                , in DSC_ADD_Input hInput
+                , in DSC_ADD_CursorLock hCursor) =>
             {
                 if (transform == null || hCamera.transform == null
                 || hCursor.m_eLockMode == CursorLockMode.None)

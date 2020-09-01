@@ -2,13 +2,13 @@
 
 namespace DSC.Actor.DOTS
 {
-    [UpdateBefore(typeof(DSC_ADG_Move))]
+    [UpdateInGroup(typeof(DSC_ADG_Update_PreNormal))]
     public sealed class DSC_ADS_CurrentMoveSpeed3DByInput : SystemBase
     {
         protected override void OnUpdate()
         {
-            Entities.ForEach((ref DSC_ADD_Input hInput
-                ,ref DSC_ADD_MoveSpeed3D hSpeed) =>
+            Entities.ForEach((ref DSC_ADD_MoveSpeed3D hSpeed
+                , in DSC_ADD_Input hInput) =>
             {
                 var f2Axis = hInput.m_hAxis.m_f2Axis;
                 float fCurrentTargetSpeed = 0;

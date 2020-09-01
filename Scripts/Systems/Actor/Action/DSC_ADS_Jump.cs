@@ -12,9 +12,9 @@ namespace DSC.Actor.DOTS
             var fTime = Time.ElapsedTime;
 
             Entities.ForEach((ref DSC_ADD_Input hInput
-                , ref DSC_ADD_Jump hJump
-                , ref DSC_ADD_GroundCheck hGround
-                , ref DSC_ADD_Velocity hVelocity) =>
+                , ref DSC_ADD_Jump hJump                
+                , ref DSC_ADD_Velocity hVelocity
+                , in DSC_ADD_GroundCheck hGround) =>
             {
                 if (!hGround.m_bOnGround)
                     return;

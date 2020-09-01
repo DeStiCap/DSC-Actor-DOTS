@@ -10,8 +10,8 @@ namespace DSC.Actor.DOTS
         protected override void OnUpdate()
         {
             Entities.ForEach((Rigidbody hRigid
-                ,ref DSC_ADD_GroundDrag hDrag
-                ,ref DSC_ADD_GroundCheck hCheck) =>
+                ,in DSC_ADD_GroundDrag hDrag
+                ,in DSC_ADD_GroundCheck hCheck) =>
             {
                 if (hRigid == null || hCheck.m_bOnGroundPrevious == hCheck.m_bOnGround)
                     return;

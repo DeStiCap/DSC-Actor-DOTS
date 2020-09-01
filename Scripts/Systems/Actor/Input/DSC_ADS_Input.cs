@@ -3,12 +3,13 @@ using DSC.Core;
 
 namespace DSC.Actor.DOTS
 {
+    [UpdateInGroup(typeof(DSC_ADG_Update_Early))]
     public sealed class DSC_ADS_Input : SystemBase
     {
         protected override void OnUpdate()
         {
-            Entities.ForEach((ref DSC_ADD_Player hPlayer
-                ,ref DSC_ADD_Input hInput) =>
+            Entities.ForEach((ref DSC_ADD_Input hInput
+                , in DSC_ADD_Player hPlayer) =>
             {
                 int nPlayerID = hPlayer.m_nID;
 

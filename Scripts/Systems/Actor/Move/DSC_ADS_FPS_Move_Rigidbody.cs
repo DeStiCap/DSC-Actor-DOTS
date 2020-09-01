@@ -17,10 +17,7 @@ namespace DSC.Actor.DOTS
 
             Entities.WithAll<DSC_ADT_FPS>()
                 .ForEach((Rigidbody hRigid
-                , ref DSC_ADD_Input hInput
-                , ref DSC_ADD_Move hMove
-                , ref DSC_ADD_MoveSpeed3D hSpeed
-                , ref DSC_ADD_GroundCheck hGround) =>
+                , ref DSC_ADD_Move hMove) =>
             {
                 if (hRigid == null
                 || !hMove.m_bHasMove)

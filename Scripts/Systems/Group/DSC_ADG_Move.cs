@@ -4,7 +4,8 @@ using UnityEngine;
 namespace DSC.Actor.DOTS
 {
     [ExecuteAlways]
-    public class DSC_ADG_Move : ComponentSystemGroup
+    [UpdateInGroup(typeof(DSC_ADG_Update_Late))]
+    public sealed class DSC_ADG_Move : ComponentSystemGroup
     {
 
     }

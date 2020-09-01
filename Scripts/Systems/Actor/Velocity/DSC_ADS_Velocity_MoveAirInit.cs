@@ -5,15 +5,15 @@ using Unity.Transforms;
 
 namespace DSC.Actor.DOTS
 {
-    [UpdateBefore(typeof(DSC_ADS_Velocity_Move))]
+    [UpdateInGroup(typeof(DSC_ADG_Update_Normal))]
     public sealed class DSC_ADS_Velocity_MoveAirInit : SystemBase
     {
         protected override void OnUpdate()
         {
-            Entities.ForEach((ref Rotation hRotation
-                , ref DSC_ADD_Move hMove
-                , ref DSC_ADD_Velocity hVelocity
-                , ref DSC_ADD_GroundCheck hGround) =>
+            Entities.ForEach((ref DSC_ADD_Velocity hVelocity
+                , in Rotation hRotation
+                , in DSC_ADD_Move hMove       
+                , in DSC_ADD_GroundCheck hGround) =>
             {
                 if (hMove.m_fDeltaTimePrevious == 0
                 || hMove.m_bAirControl

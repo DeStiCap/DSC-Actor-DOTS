@@ -10,9 +10,9 @@ namespace DSC.Actor.DOTS
         protected override void OnUpdate()
         {
             Entities.ForEach((Transform transform
-                ,DSC_ADM_MoveSlopeCurve hCurve
-                ,ref DSC_ADD_MoveSlope hSlope
-                ,ref DSC_ADD_GroundCheck hGround) =>
+                , DSC_ADM_MoveSlopeCurve hCurve
+                , ref DSC_ADD_MoveSlope hSlope
+                , in DSC_ADD_GroundCheck hGround) =>
             {
                 if (transform == null
                 || hCurve.Value == null)

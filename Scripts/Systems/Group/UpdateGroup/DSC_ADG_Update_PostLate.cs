@@ -5,7 +5,9 @@ namespace DSC.Actor.DOTS
 {
     [ExecuteAlways]
     [UpdateInGroup(typeof(SimulationSystemGroup), OrderLast = true)]
-    public sealed class DSC_ADG_Update_Late : ComponentSystemGroup
+    [UpdateAfter(typeof(DSC_ADG_Update_Late))]
+    [UpdateBefore(typeof(LateSimulationSystemGroup))]
+    public sealed class DSC_ADG_Update_PostLate : ComponentSystemGroup
     {
 
     }

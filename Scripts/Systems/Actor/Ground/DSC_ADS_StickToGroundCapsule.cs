@@ -12,9 +12,9 @@ namespace DSC.Actor.DOTS
             Entities.ForEach((Transform transform
                 ,Rigidbody hRigid
                 ,CapsuleCollider hCol
-                ,ref DSC_ADD_StickToGround hStick
-                ,ref DSC_ADD_GroundCheck hGround
-                ,ref DSC_ADD_Jump hJump) =>
+                ,in DSC_ADD_StickToGround hStick
+                ,in DSC_ADD_GroundCheck hGround
+                ,in DSC_ADD_Jump hJump) =>
             {
                 if (transform == null
                 || hRigid == null
@@ -24,8 +24,7 @@ namespace DSC.Actor.DOTS
                 || hJump.m_bJumping)
                     return;
 
-                RaycastHit hitInfo;
-                if (Physics.SphereCast(transform.position, hCol.radius, -transform.up, out hitInfo,
+                if (Physics.SphereCast(transform.position, hCol.radius, -transform.up, out RaycastHit hitInfo,
                                        ((hCol.height * 0.5f) - hCol.radius) +
                                        hStick.m_fStickToGroundDistance, hGround.m_eGroundLayer, QueryTriggerInteraction.Ignore))
                 {

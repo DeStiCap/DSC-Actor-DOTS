@@ -1,12 +1,10 @@
 ﻿using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
-using UnityEngine;
 
 namespace DSC.Actor.DOTS
 {
-    [UpdateInGroup(typeof(DSC_ADG_Update_Early))]
-    [UpdateAfter(typeof(DSC_ADS_GravityInit))]
+    [UpdateInGroup(typeof(DSC_ADG_Update_Normal))]
     public sealed class DSC_ADS_Velocity_Gravity : SystemBase
     {
         protected override void OnUpdate()
@@ -15,8 +13,8 @@ namespace DSC.Actor.DOTS
 
             Entities.ForEach((ref Rotation hRotation
                 , ref DSC_ADD_Velocity hVelocity
-                , ref DSC_ADD_Gravity hGravity
-                , ref DSC_ADD_GroundCheck hGround) =>
+                , in DSC_ADD_Gravity hGravity
+                , in DSC_ADD_GroundCheck hGround) =>
             {
 
                 float3 f3UpDirection = MathUtility.GetDirectionByRotation(hRotation.Value, Core.DirectionType.Up);

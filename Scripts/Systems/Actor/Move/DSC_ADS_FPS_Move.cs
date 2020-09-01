@@ -15,10 +15,10 @@ namespace DSC.Actor.DOTS
             var vCamRight = Camera.main.transform.right;
 
             Entities.WithAll<DSC_ADT_FPS>()
-                .ForEach((ref DSC_ADD_Input hInput
-                , ref DSC_ADD_Move hMove
-                , ref DSC_ADD_MoveSpeed3D hSpeed
-                , ref DSC_ADD_GroundCheck hGround) =>
+                .ForEach((ref DSC_ADD_Move hMove
+                , in DSC_ADD_Input hInput
+                , in DSC_ADD_MoveSpeed3D hSpeed
+                , in DSC_ADD_GroundCheck hGround) =>
             {
                 var f2Axis = hInput.m_hAxis.m_f2Axis;
 
