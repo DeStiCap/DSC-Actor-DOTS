@@ -12,6 +12,9 @@ namespace DSC.Actor.DOTS
         public float m_fForce;
 
         [HideInInspector]
+        public bool m_bJumpInput;
+
+        [HideInInspector]
         public bool m_bJumping;
 
         [HideInInspector]

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DSC.Actor.DOTS
 {
-    [UpdateInGroup(typeof(DSC_ADG_Update_PostLate))]
+    [UpdateInGroup(typeof(DSC_ADG_Update_Late), OrderLast = true)]
     public sealed class DSC_ADS_Debug_Rigidbody_Velocity : SystemBase
     {
         protected override void OnUpdate()

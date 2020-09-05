@@ -2,7 +2,7 @@
 
 namespace DSC.Actor.DOTS
 {
-    [UpdateInGroup(typeof(DSC_ADG_Update_PreNormal))]
+    [UpdateInGroup(typeof(DSC_ADG_FixedUpdate_Normal))]
     public sealed class DSC_ADS_CurrentMoveSpeed3DByInput : SystemBase
     {
         protected override void OnUpdate()

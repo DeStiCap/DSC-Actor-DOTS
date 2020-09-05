@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DSC.Actor.DOTS
 {
-    [UpdateInGroup(typeof(DSC_ADG_Update_Early))]
+    [UpdateInGroup(typeof(DSC_ADG_FixedUpdate_Early))]
     [UpdateAfter(typeof(DSC_ADG_GroundCheck))]
     public sealed class DSC_ADS_GroundDrag : SystemBase
     {

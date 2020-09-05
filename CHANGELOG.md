@@ -1,3 +1,16 @@
+## [0.2.5-preivew.1] - 2020-09-05
+- Move all physic system to run in FixedStepSimulationSystemGroup.
+- Add DSC_ADS_JumpInput.
+- Add DSC_ADG_FixedUpdate_Early.
+- Add DSC_ADG_FixedUpdate_Normal.
+- Add DSC_ADG_FixedUpdate_Late.
+- Remove DSC_ADG_Update_PreEarly.
+- Remove DSC_ADG_Update_PostEarly.
+- Remove DSC_ADG_Update_PreNormal.
+- Remove DSC_ADG_Update_PostNormal.
+- Remove DSC_ADG_Update_PreLate.
+- Remove DSC_ADG_Update_PostLate.
+
 ## [0.2.4-preivew.1] - 2020-09-01
 - Add DSC_ADG_Update_PostEarly.
 - Add DSC_ADG_Update_PreNormal.

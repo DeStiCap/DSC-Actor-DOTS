@@ -3,7 +3,7 @@ using Unity.Mathematics;
 
 namespace DSC.Actor.DOTS
 {
-    [UpdateInGroup(typeof(DSC_ADG_Update_PostNormal))]
+    [UpdateInGroup(typeof(DSC_ADG_FixedUpdate_Normal))]
     public sealed class DSC_ADS_Velocity_Move : SystemBase
     {
         protected override void OnUpdate()

@@ -2,7 +2,8 @@
 
 namespace DSC.Actor.DOTS
 {
-    [UpdateInGroup(typeof(DSC_ADG_Update_Normal))]
+    [UpdateInGroup(typeof(DSC_ADG_FixedUpdate_Normal))]
+    [UpdateAfter(typeof(DSC_ADS_CurrentMoveSpeed3DByInput))]
     public sealed class DSC_ADS_MoveSlope3DSpeedMultiplier : SystemBase
     {
         protected override void OnUpdate()
