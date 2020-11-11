@@ -2,12 +2,12 @@
     "name": "com.dsc.actordots",
     "author": "DeStiCap",
     "displayName": "DSC Actor DOTS",
-    "version": "0.2.5-preview.1",
-    "unity": "2020.1",
+    "version": "0.3.0-preview.1",
+    "unity": "2020.2",
     "repository": {
         "type": "git",
         "url": "https://github.com/DeStiCap/DSC-Actor-DOTS.git",
-        "revision": "5e9c5c7064b302d60340b3cec52269837796384e"
+        "revision": "ac7f7493fb045656de7aaf34c74bd2b32adb8b67"
     },
     "description": "DOTS Actor system for unity.",
     "keywords": [
@@ -15,13 +15,18 @@
         "DOTS"
     ],
     "dependencies": {
-        "com.unity.entities": "0.14.0-preview.18",
-        "com.unity.dots.editor": "0.10.0-preview"
+        "com.unity.entities": "0.16.0-preview.21",
+        "com.unity.dots.editor": "0.11.0-preview.3"
     },
     "samples": [
         {
+            "displayName": "Standard Template",
+            "description": "Template actor for games.",
+            "path": "Samples~/StandardTemplate"
+        },
+        {
             "displayName": "FPS Template",
-            "description": "Template for FPS games.",
+            "description": "Template actor for FPS games.",
             "path": "Samples~/FPSTemplate"
         }
     ]

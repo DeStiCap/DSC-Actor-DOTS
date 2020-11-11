@@ -20,6 +20,11 @@ namespace DSC.Actor.DOTS
 
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
+            if(m_hPlayer == null && transform.parent != null)
+            {
+                m_hPlayer = transform.parent.GetComponent<DSC_Actor_Player>();
+            }
+
             if(m_hPlayer == null)
             {
                 Debug.LogError("Need to assign DSC_Actor_Player.");

@@ -1,3 +1,10 @@
+## [0.3.0-preivew.1] - 2020-11-11
+- Add StandardTemplate sample.
+- Change minimum requirement Unity version to 2020.2
+- Change dependency Entities to version 0.16.0-preview.21
+- Change dependency DOTS editor version 0.11.0-preview.3
+- DSC_ADD_PlayerAuthor now will automatic get component DSC_Actor_Player from parent if it's null.
+
 ## [0.2.5-preivew.1] - 2020-09-05
 - Move all physic system to run in FixedStepSimulationSystemGroup.
 - Add DSC_ADS_JumpInput.
