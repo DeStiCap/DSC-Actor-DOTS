@@ -1,3 +1,6 @@
+## [0.3.1-preivew.1] - 2021-01-07
+- Update to support DSC-Core and DSC-Input update.
+
 ## [0.3.0-preivew.1] - 2020-11-11
 - Add StandardTemplate sample.
 - Change minimum requirement Unity version to 2020.2

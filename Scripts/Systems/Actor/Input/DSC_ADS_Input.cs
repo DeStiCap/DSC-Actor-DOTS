@@ -1,5 +1,6 @@
 ﻿using Unity.Entities;
 using DSC.Core;
+using DSC.Input;
 
 namespace DSC.Actor.DOTS
 {

@@ -1,5 +1,6 @@
 {
     "name": "DSC.Actor.DOTS.Mono",
+    "rootNamespace": "DSC.Actor.DOTS",
     "references": [
         "GUID:acff8e849db7dec488c770445e10185e"
     ],
