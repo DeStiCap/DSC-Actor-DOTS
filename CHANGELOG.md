@@ -1,3 +1,7 @@
+## [0.3.2-preivew.1] - 2021-02-09
+- Change dependency Entities to version 0.17.0-preview.42
+- Change dependency DOTS editor version 0.12.0-preview.6
+
 ## [0.3.1-preivew.1] - 2021-01-07
 - Update to support DSC-Core and DSC-Input update.
 
