@@ -1,10 +1,10 @@
-﻿using Unity.Entities;
+using Unity.Entities;
 using UnityEngine;
 
 namespace DSC.Actor.DOTS
 {
     [UpdateInGroup(typeof(DSC_ADG_FixedUpdate_Early))]
-    public sealed class DSC_ADS_GravityInit : SystemBase
+    public sealed partial class DSC_ADS_GravityInit : SystemBase
     {
         protected override void OnUpdate()
         {

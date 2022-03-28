@@ -1,4 +1,4 @@
-﻿using Unity.Entities;
+using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -6,7 +6,7 @@ namespace DSC.Actor.DOTS
 {    
     [UpdateInGroup(typeof(DSC_ADG_Move))]
     [UpdateAfter(typeof(DSC_ADS_FPS_Move))]
-    public sealed class DSC_ADS_Move_Character : SystemBase
+    public sealed partial class DSC_ADS_Move_Character : SystemBase
     {
         protected override void OnUpdate()
         {

@@ -1,11 +1,11 @@
-﻿using Unity.Entities;
+using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
 
 namespace DSC.Actor.DOTS
 {
     [UpdateInGroup(typeof(DSC_ADG_StickToGround))]
-    public sealed class DSC_ADS_StickToGroundCapsule : SystemBase
+    public sealed partial class DSC_ADS_StickToGroundCapsule : SystemBase
     {
         protected override void OnUpdate()
         {

@@ -1,11 +1,11 @@
-﻿using Unity.Entities;
+using Unity.Entities;
 using DSC.Core;
 
 namespace DSC.Actor.DOTS
 {
     [UpdateInGroup(typeof(DSC_ADG_FixedUpdate_Normal))]
     [UpdateAfter(typeof(DSC_ADS_CurrentMoveSpeed3DByInput))]
-    public sealed class DSC_ADS_Run3DByInput : SystemBase
+    public sealed partial class DSC_ADS_Run3DByInput : SystemBase
     {
         protected override void OnUpdate()
         {

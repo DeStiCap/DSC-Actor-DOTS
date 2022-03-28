@@ -1,3 +1,7 @@
+## [0.3.3-preivew.1] - 2022-03-28
+- Changed dependency Entities to version 0.50.0-preview.24
+- Removed dependency DOTS editor.
+
 ## [0.3.2-preivew.1] - 2021-02-09
 - Change dependency Entities to version 0.17.0-preview.42
 - Change dependency DOTS editor version 0.12.0-preview.6

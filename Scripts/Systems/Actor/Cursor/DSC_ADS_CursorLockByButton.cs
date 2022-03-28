@@ -1,4 +1,4 @@
-﻿using Unity.Entities;
+using Unity.Entities;
 using UnityEngine;
 using DSC.Core;
 
@@ -6,7 +6,7 @@ namespace DSC.Actor.DOTS
 {
     [UpdateInGroup(typeof(DSC_ADG_Update_Normal))]
     [UpdateBefore(typeof(DSC_ADS_CursorLock))]
-    public sealed class DSC_ADS_CursorLockByButton : SystemBase
+    public sealed partial class DSC_ADS_CursorLockByButton : SystemBase
     {
         protected override void OnUpdate()
         {

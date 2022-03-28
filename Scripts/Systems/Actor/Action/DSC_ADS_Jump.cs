@@ -1,10 +1,10 @@
-﻿using Unity.Entities;
+using Unity.Entities;
 
 namespace DSC.Actor.DOTS
 {
     [UpdateInGroup(typeof(DSC_ADG_FixedUpdate_Early))]
     [UpdateAfter(typeof(DSC_ADG_GroundCheck))]
-    public sealed class DSC_ADS_Jump : SystemBase
+    public sealed partial class DSC_ADS_Jump : SystemBase
     {
         protected override void OnUpdate()
         {

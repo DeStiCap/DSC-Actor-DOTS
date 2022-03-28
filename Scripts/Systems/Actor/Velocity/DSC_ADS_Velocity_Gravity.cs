@@ -1,4 +1,4 @@
-﻿using Unity.Entities;
+using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 
@@ -6,7 +6,7 @@ namespace DSC.Actor.DOTS
 {
     [UpdateInGroup(typeof(DSC_ADG_FixedUpdate_Normal))]
     [UpdateBefore(typeof(DSC_ADS_Velocity_Move))]
-    public sealed class DSC_ADS_Velocity_Gravity : SystemBase
+    public sealed partial class DSC_ADS_Velocity_Gravity : SystemBase
     {
         protected override void OnUpdate()
         {

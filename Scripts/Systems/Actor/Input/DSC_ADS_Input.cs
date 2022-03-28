@@ -1,11 +1,11 @@
-﻿using Unity.Entities;
+using Unity.Entities;
 using DSC.Core;
 using DSC.Input;
 
 namespace DSC.Actor.DOTS
 {
     [UpdateInGroup(typeof(DSC_ADG_Update_Early))]
-    public sealed class DSC_ADS_Input : SystemBase
+    public sealed partial class DSC_ADS_Input : SystemBase
     {
         protected override void OnUpdate()
         {

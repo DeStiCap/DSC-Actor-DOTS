@@ -1,11 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Unity.Entities;
 using Unity.Transforms;
 
 namespace DSC.Actor.DOTS
 {
     [UpdateInGroup(typeof(DSC_ADG_GameObjectToEntity))]
-    public sealed class DSC_ADS_CopyPositionGameObject : SystemBase
+    public sealed partial class DSC_ADS_CopyPositionGameObject : SystemBase
     {
         protected override void OnUpdate()
         {

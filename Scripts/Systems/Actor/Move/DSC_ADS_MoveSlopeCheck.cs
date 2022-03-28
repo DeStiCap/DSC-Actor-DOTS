@@ -1,11 +1,11 @@
-﻿using Unity.Entities;
+using Unity.Entities;
 using UnityEngine;
 
 namespace DSC.Actor.DOTS
 {
     [UpdateInGroup(typeof(DSC_ADG_FixedUpdate_Early))]
     [UpdateAfter(typeof(DSC_ADG_GroundCheck))]
-    public sealed class DSC_ADS_MoveSlopeCheck : SystemBase
+    public sealed partial class DSC_ADS_MoveSlopeCheck : SystemBase
     {
         protected override void OnUpdate()
         {
